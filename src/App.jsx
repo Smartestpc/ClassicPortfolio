@@ -1,8 +1,15 @@
-import Loader from "./pages/Loader"
+import HomePage from "./pages/HomePage"
+import LoginPage from "./pages/LoginPage"
+import {BrowserRouter, Routes, Route} from "react-router-dom"
 
 function App() {
   return (
-   <Loader />
+   <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<LoginPage />} />
+        <Route path="/home" element={<HomePage />} />
+      </Routes>
+   </BrowserRouter>
   )
 }
 
