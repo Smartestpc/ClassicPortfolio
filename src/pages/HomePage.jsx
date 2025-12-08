@@ -16,7 +16,7 @@ function HomePage() {
       >
         <div
           className="h-20 w-20 bg-cover bg-center hover:scale-110 transition-transform"
-          style={{ backgroundImage: "url('/userfile.png')" }}
+          style={{ backgroundImage: "url('/userfile.webp')" }}
         ></div>
         <h3 className="text-white font-bold ">My Files</h3>
       </div>

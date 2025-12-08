@@ -40,7 +40,7 @@ function Library() {
           <p>This is the Library component.</p>
         </div>
         <div className="p-5 w-7/10 bg-gray-100">
-          <p>This is the Library component.</p>
+          <p>This is the page component.</p>
         </div>
       </div>
     </div>
