@@ -1,28 +1,29 @@
+import { useContext } from "react";
 import ButtomNav from "../components/ui/ButtomNav";
 import Library from "../components/ui/Library";
+import { FilesToggleHandler } from "../components/FilesToggle";
 
 function HomePage() {
+  let { ToggleHandle, isToggled } = useContext(FilesToggleHandler);
   return (
     <div
-      className="h-screen bg-cover bg-center grid place-items-center relative"
+      className="h-screen bg-cover bg-center flex justify-center relative items-center"
       style={{ backgroundImage: "url('/winbg.png')" }}
     >
-      <div className="flex flex-col absolute top-5 left-5 w-20 items-center cursor-pointer">
+      <div
+        onClick={ToggleHandle}
+        className="flex flex-col absolute top-5 left-5 w-20 items-center cursor-pointer"
+      >
         <div
           className="h-20 w-20 bg-cover bg-center hover:scale-110 transition-transform"
           style={{ backgroundImage: "url('/userfile.png')" }}
         ></div>
         <h3 className="text-white font-bold ">My Files</h3>
       </div>
-      <Library />
+      <div className={`${isToggled ? "block" : "hidden"}`}>
+        <Library />
+      </div>
       <ButtomNav />
-      {/* <div className="flex flex-col absolute top-15 right-15 w-20 items-center cursor-pointer">
-        <div
-          className="h-20 w-20 bg-cover bg-center hover:scale-110 transition-transform"
-          style={{ backgroundImage: "url('/browser.png')" }}
-        ></div>
-        <h3 className="text-white font-bold ">Browser</h3>
-      </div> */}
     </div>
   );
 }

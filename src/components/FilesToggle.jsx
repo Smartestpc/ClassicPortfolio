@@ -1,15 +1,21 @@
 import { createContext, useState } from "react"
 
-let [isToggled, setIsToggled] = useState(false)
 export let FilesToggleHandler = createContext();
 
 function FilesToggle({children}) {
+    let [isToggled, setIsToggled] = useState(true);
+    let [size, setSize] = useState(true);
 
-    const FilesToggleHandler = () => {
+    function ToggleHandle () {
         setIsToggled(!isToggled)
     }
-  return (
-    <FilesToggleHandler.Provider value={{isToggled, setIsToggled, FilesToggleHandler}}>
+
+    function SizeToggle () {
+        setSize(!size)
+    }
+
+    return (
+    <FilesToggleHandler.Provider value={{isToggled, ToggleHandle, size, SizeToggle}}>
         {children}
     </FilesToggleHandler.Provider>
   )

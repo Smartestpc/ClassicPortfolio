@@ -1,4 +1,3 @@
-// import React from 'react'
 import { useEffect, useState } from "react";
 import Loader from "../components/ui/Loader";
 import UserLoginPage from "../components/ui/UserLoginPage";
