@@ -4,14 +4,16 @@ import Library from "../components/ui/Library";
 import { FilesToggleHandler } from "../components/FilesToggle";
 
 function HomePage() {
-  let { ToggleHandle, isToggled } = useContext(FilesToggleHandler);
+  let { ToggleHandle, isToggled, exitBtn, ExitBtnHandle } = useContext(FilesToggleHandler);
   return (
     <div
       className="h-screen bg-cover bg-center flex justify-center relative items-center"
       style={{ backgroundImage: "url('/winbg.png')" }}
     >
       <div
-        onClick={ToggleHandle}
+        onClick={() => {
+          ToggleHandle(); ExitBtnHandle("HomePage");
+        }}
         className="flex flex-col absolute top-5 left-5 w-20 items-center cursor-pointer"
       >
         <div
@@ -20,7 +22,7 @@ function HomePage() {
         ></div>
         <h3 className="text-white font-bold ">My Files</h3>
       </div>
-      <div className={`${isToggled ? "block" : "hidden"}`}>
+      <div className={`${ExitBtnHandle ? "block" : "hidden"}`}>
         <Library />
       </div>
       <ButtomNav />

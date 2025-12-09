@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import Btn from "./Btn";
 
 function UserLoginPage() {
@@ -10,7 +11,11 @@ function UserLoginPage() {
           alt="Nwaiche Smart"
         />
         <h1 className="text-3xl font-bold text-white">Smartest PC</h1>
-        <Btn />
+        <Link to={"/home"}>
+         <div>
+           <Btn  logintext="Login"/>
+         </div>
+        </Link>
       </div>
     </div>
   );
