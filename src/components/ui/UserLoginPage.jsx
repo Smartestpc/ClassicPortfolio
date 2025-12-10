@@ -4,9 +4,9 @@ import Btn from "./Btn";
 function UserLoginPage() {
   return (
     <div className="w-full bg-blue-700 h-screen flex justify-center items-center">
-      <div className="h-[400px] w-[400px] flex flex-col justify-center items-center rounded-lg">
+      <div className="h-[400px] w-[400px] flex flex-col gap-4 justify-center items-center rounded-lg">
         <img
-          className="h-[150px] rounded-full mb-3"
+          className="h-[150px] rounded-full"
           src="Smart.jpg"
           alt="Nwaiche Smart"
         />

@@ -13,6 +13,8 @@ function FilesToggle({ children }) {
   let [browser, setBrowser] = useState("");
   let [projectNotes, setProjectNotes] = useState(false);
   let [note, setNote] = useState("");
+  let [SelectContact, setSelectContact] = useState(false);
+  let [ContactHeader, setContactHeader] = useState("");
 
   function ToggleHandle() {
     if (isToggled == false) {
@@ -26,6 +28,9 @@ function FilesToggle({ children }) {
     }
     if (projectNotes == true) {
       setProjectNotes(!projectNotes)
+    }
+    if (SelectContact == true) {
+      setSelectContact(!SelectContact);
     }
   }
   function ExitBtnHandle(source) {
@@ -52,6 +57,9 @@ function FilesToggle({ children }) {
     if (smartInfo === true) {
       setSmartInfo(false);
     }
+    if (SelectContact == true) {
+      setSelectContact(!SelectContact);
+    }
   }
   function BrowserHandle() {
     if (isToggled === true) {
@@ -67,6 +75,9 @@ function FilesToggle({ children }) {
       setBrowser("Browser");
       setSmartInfo(!smartInfo);
     }
+    if (SelectContact == true) {
+      setSelectContact(!SelectContact);
+    }
   }
   function NoteHandle() {
     if (isToggled === true) {
@@ -81,6 +92,27 @@ function FilesToggle({ children }) {
     if (projectNotes == false) {
       setProjectNotes(!projectNotes)
       setNote("Notes");
+    }
+    if (SelectContact == true) {
+      setSelectContact(!SelectContact);
+    }
+  }
+  function ContactHandle() {
+    if (isToggled === true) {
+      setIsToggled(false);
+    }
+    if (fileToggled === true) {
+      setFileToggled(false);
+    }
+    if (smartInfo == true) {
+      setSmartInfo(!smartInfo);
+    }
+    if (projectNotes == true) {
+      setProjectNotes(!projectNotes)
+    }
+    if (SelectContact == false) {
+      setSelectContact(!SelectContact);
+      setContactHeader("Contact");
     }
   }
 
@@ -109,6 +141,9 @@ function FilesToggle({ children }) {
         note,
         projectNotes,
         NoteHandle,
+        SelectContact,
+        ContactHandle,
+        ContactHeader
       }}
     >
       {children}

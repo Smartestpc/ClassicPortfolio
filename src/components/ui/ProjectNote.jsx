@@ -3,21 +3,21 @@ import React from "react";
 function ProjectNote() {
   return (
     <div className="w-full h-full overflow-y-scroll relative">
-      <div className="w-full max-w-[650px] bg-gray-100 flex justify-start items-center border-b border-gray-100 fixed  ">
+      <div className="w-full bg-gray-100 flex justify-start items-center border-b border-gray-100 sticky top-0 pt-3 pb-3 z-10">
         <ul className="flex items-center justify-center gap-3">
-          <li className="hover:text-blue-700 duration-200 ">
+          <li className=" cursor-pointer hover:text-blue-700 duration-200 ">
             <span className="underline">F</span>ile
           </li>
-          <li className="hover:text-blue-700 duration-200 ">
+          <li className=" cursor-pointer hover:text-blue-700 duration-200 ">
             <span className="underline">E</span>dit
           </li>
-          <li className="hover:text-blue-700 duration-200 ">
+          <li className=" cursor-pointer hover:text-blue-700 duration-200 ">
             F<span className="underline">o</span>rmat
           </li>
-          <li className="hover:text-blue-700 duration-200 ">
+          <li className=" cursor-pointer hover:text-blue-700 duration-200 ">
             <span className="underline">V</span>iew
           </li>
-          <li className="hover:text-blue-700 duration-200 ">
+          <li className=" cursor-pointer hover:text-blue-700 duration-200 ">
             <span className="underline">H</span>elp
           </li>
         </ul>
