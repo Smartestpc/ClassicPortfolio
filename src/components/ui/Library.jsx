@@ -13,9 +13,11 @@ import ProjectNote from "./ProjectNote";
 import ProjectNoteHead from "./ProjectNoteHead";
 import ContactHead from "./ContactHead";
 import SelectContactPage from "./SelectContactPage";
+import Shared from "./Shared";
+import Recents from "./Recents";
 
 function Library() {
-  let { ToggleHandle, size, SizeToggle, isToggled, myFileName, fileToggled, exitBtn, ExitBtnHandle, myInfo, browser, smartInfo, projectNotes, note, SelectContact, ContactHeader } = useContext(FilesToggleHandler);
+  let { size, SizeToggle, isToggled, myFileName, fileToggled, exitBtn, ExitBtnHandle, myInfo, browser, smartInfo, projectNotes, note, SelectContact, ContactHeader, subLibrary, recent, } = useContext(FilesToggleHandler);
   return (
     <div
       className={`" border border-blue-800 duration-200 relative z-10 overflow-hidden  bg-white h-screen w-screen overflow-hidden" ${
@@ -67,7 +69,7 @@ function Library() {
         </div>
         <div className="p-5 w-9/10 bg-gray-100 overflow-hidden">
           {
-            isToggled ? <Resume /> : ""
+            isToggled == true && subLibrary == false && recent == false ? <Resume /> : ""
           }
           {
             fileToggled ? <AboutMeDetails /> : ""
@@ -80,6 +82,12 @@ function Library() {
           }
           {
             SelectContact ? <SelectContactPage /> : ""
+          }
+          {
+            subLibrary ? <Shared /> : ""
+          }
+          {
+            recent ? <Recents /> : ""
           }
         </div>
       </div>

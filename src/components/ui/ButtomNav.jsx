@@ -29,12 +29,12 @@ function ButtomNav() {
           style={{ backgroundImage: "url('/contact.webp')", height: "60px", width: "60px" }}
         ></div>
       </div>
-      <div>
+      {/* <div>
         <div
           className=" bg-cover bg-center hover:scale-110 transition-transform sm:w-20 sm:h-20"
           style={{ backgroundImage: "url('/gallery.webp')", height: "60px", width: "60px" }}
         ></div>
-      </div>
+      </div> */}
     </div>
   );
 }

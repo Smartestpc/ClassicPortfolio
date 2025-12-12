@@ -3,7 +3,6 @@ import { CiSearch } from "react-icons/ci";
 function ContactHead() {
   return (
     <div className="w-full h-full flex flex-col justify-center items-start text-sm text-black ">
-      {/* <h1 className="text-sm text-gray-700 mb-2">Favourites</h1> */}
       <div className="w-full p-2 flex items-center justify-center">
         <div className="w-full flex  items-center gap-3 bg-white rounded">
             <CiSearch fill="gray-300" size={30}/> 
